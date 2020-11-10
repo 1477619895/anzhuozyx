@@ -6,6 +6,7 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +16,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import org.w3c.dom.Text;
+
+import static android.content.ContentValues.TAG;
 
 public class Linear extends Activity {
     EditText yhText;
@@ -27,6 +30,10 @@ public class Linear extends Activity {
     boolean isCheck = false,isAuto=false;
     private CheckBox auto;
     private String sUsername,sPassword;
+    private  int REQUEST_CREATENEW = 0;
+    private  int RESULT_OK=0;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +66,7 @@ public class Linear extends Activity {
 
 
         }
+
     }
     CompoundButton.OnCheckedChangeListener chkbox = new CompoundButton.OnCheckedChangeListener() {
         @Override
@@ -75,6 +83,20 @@ public class Linear extends Activity {
             isAuto = b;
         }
     };
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == REQUEST_CREATENEW) {
+            if (requestCode == RESULT_OK) {
+                String user = data.getStringExtra("username");
+                String password1 = data.getStringExtra("password");
+                yhText.setText(user);
+                mmText.setText(password1);
+            } else {
+                Log.d(TAG, "注册新用户返回失败");
+            }
+        }
+    }
 
 
 //    public void  liner(View view){
@@ -128,12 +150,12 @@ public class Linear extends Activity {
 
         }
     public void zhuce(View view){
-        Intent intent1=new Intent(Linear.this,RegisterActivity.class);
-        startActivity(intent1);
+        Intent intent1 = new Intent(Linear.this,RegisterActivity.class);
+        startActivityForResult(intent1,REQUEST_CREATENEW);
     }
-    @Override
-    protected void onStop() {
-        super.onStop();
-       finish();
-    }
+//    @Override
+//    protected void onStop() {
+//        super.onStop();
+//       finish();
+//    }
 }

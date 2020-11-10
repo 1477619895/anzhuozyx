@@ -37,7 +37,7 @@
         android:paddingTop="10dp" />
 
     <EditText
-        android:id="@+id/qrmm"
+        android:id="@+id/zcmm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
