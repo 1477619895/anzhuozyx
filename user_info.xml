@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <string name="password">test</string>
+    <string name="username">test</string>
+    <boolean name="isCheck" value="true" />
+</map>

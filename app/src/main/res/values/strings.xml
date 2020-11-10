@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">zyx_sb</string>
+    <string name="skip_wait">%d秒跳过</string>
+</resources>
