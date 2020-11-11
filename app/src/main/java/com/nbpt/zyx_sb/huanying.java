@@ -29,20 +29,9 @@ View.OnClickListener dianji = new View.OnClickListener() {
         tvskip.setText("正在跳转");
         Intent intent1=new Intent(huanying.this,Linear.class);
         startActivity(intent1);
+
     }
 };
-
-//    public void onSkipClick(View view){
-//
-//        Intent intent1=new Intent(huanying.this,Linear.class);
-//        startActivity(intent1);
-////        if (countDownTimer != null)
-////        {
-////            countDownTimer.cancel();
-////            Intent intent1=new Intent(huanying.this,Linear.class);
-////            startActivity(intent1);
-////        }
-//    }
 
     CountDownTimer countDownTimer = new CountDownTimer(3000,1000) {
 
@@ -54,7 +43,9 @@ View.OnClickListener dianji = new View.OnClickListener() {
             tvskip.setText("正在跳转");
             Intent intent1=new Intent(huanying.this,Linear.class);
             startActivity(intent1);
+
         }
+
     };
 }
 
