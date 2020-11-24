@@ -1,6 +1,7 @@
 package com.nbpt.zyx_sb;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.ArrayMap;
 import android.view.View;
@@ -45,7 +46,19 @@ public class MenuActivity extends Activity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(MenuActivity.this,"当前点击的图标是:"+Fruitname[i],Toast.LENGTH_LONG).show();
+                switch (i){
+                    case 0:{Intent intent = new Intent(MenuActivity.this, zhinengjiaju.class);
+                        startActivity(intent);break;}
+                    case 1:{Intent intent1 = new Intent(MenuActivity.this, znsc.class);
+                        startActivity(intent1);break;}
+                    case 2:{Intent intent2 = new Intent(MenuActivity.this, tqyb.class);
+                        startActivity(intent2);break;}
+                    case 3:{Intent intent3 = new Intent(MenuActivity.this, szzx.class);
+                        startActivity(intent3);break;}
+                }
             }
         });
+
+
     }
 }
