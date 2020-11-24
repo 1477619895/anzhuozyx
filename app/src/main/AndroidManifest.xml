@@ -32,18 +32,20 @@
             android:theme="@android:style/Theme.NoTitleBar" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MenuActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".huanying"
-            android:theme="@android:style/Theme.NoTitleBar"></activity>
-        <activity android:name=".Main4Activity">
-
-        </activity>
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity android:name=".Main4Activity" />
+        <activity android:name=".zhinengjiaju" />
+        <activity android:name=".znsc" />
+        <activity android:name=".tqyb" />
+        <activity android:name=".szzx"></activity>
     </application>
 
 </manifest>
