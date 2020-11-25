@@ -32,11 +32,7 @@
             android:theme="@android:style/Theme.NoTitleBar" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MenuActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".huanying"
@@ -45,7 +41,14 @@
         <activity android:name=".zhinengjiaju" />
         <activity android:name=".znsc" />
         <activity android:name=".tqyb" />
-        <activity android:name=".szzx"></activity>
+        <activity android:name=".szzx" />
+        <activity android:name=".List">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

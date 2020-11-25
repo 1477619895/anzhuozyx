@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="FruitName">
+        <item>苹果</item>
+        <item>香蕉</item>
+        <item>樱桃</item>
+        <item>葡萄</item>
+        <item>芒果</item>
+        <item>橘子</item>
+        <item>梨</item>
+        <item>菠萝</item>
+        <item>草莓</item>
+    </array>
+</resources>
