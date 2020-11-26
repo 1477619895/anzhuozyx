@@ -4,14 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.nbpt.zyx_sb.szzx">
+    tools:context="com.nbpt.zyx_sb.testlist">
 
     <ListView
-        android:id="@+id/qq"
+        android:id="@+id/qwe"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:divider="@color/colorPrimaryDark"
-        android:dividerHeight="10dp"
-        android:entries="@array/FruitName" />
+        android:divider="@color/colorPrimary"
+        android:dividerHeight="1dp"/>
 </LinearLayout>

@@ -32,7 +32,11 @@
             android:theme="@android:style/Theme.NoTitleBar" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MenuActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".huanying"
@@ -42,13 +46,9 @@
         <activity android:name=".znsc" />
         <activity android:name=".tqyb" />
         <activity android:name=".szzx" />
-        <activity android:name=".List">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".List"></activity>
+        <activity android:name=".testlist" />
+        <activity android:name=".lianxiwomen" android:label="联系我们"></activity>
     </application>
 
 </manifest>
