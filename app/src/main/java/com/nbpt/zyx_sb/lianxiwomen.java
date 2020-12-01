@@ -28,5 +28,11 @@ public class lianxiwomen extends Activity {
             startActivity(intent);
 
         }
+    public void qwer (View view)
+    {
+        Uri uri = Uri.parse("http://baike.baidu.com/view/753813.htm");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
 
+    }
 }
