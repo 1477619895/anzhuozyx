@@ -26,11 +26,14 @@
                 android:text="联系电话：" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/dh"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="0574-15257478365" />
+                android:clickable="true"
+                android:onClick="qwe"
+                android:text="0574-15257478365"
+                android:textColor="@color/colorPrimaryDark" />
 
         </LinearLayout>
 
@@ -66,10 +69,11 @@
                 android:text="主页：" />
 
             <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/WZ"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="www.baidu.com" />
+                android:text="www.baidu.com"
+                android:textColor="@color/colorPrimaryDark" />
         </LinearLayout>
     </LinearLayout>
 
