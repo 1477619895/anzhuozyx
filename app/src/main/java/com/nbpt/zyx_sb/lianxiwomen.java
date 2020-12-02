@@ -30,8 +30,15 @@ public class lianxiwomen extends Activity {
         }
     public void qwer (View view)
     {
-        Uri uri = Uri.parse("http://baike.baidu.com/view/753813.htm");
+        Uri uri = Uri.parse("http://www.baidu.com");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+
+    }
+    public void qwerr (View view)
+    {
+        Uri data1 = Uri.parse("androidamap://viewMap?sourceApplication=appName&poiname=宁波职业技术学院&lat=29.90173&lon=121.820869&dev=0");
+        Intent intent = new Intent(Intent.ACTION_VIEW, data1);
         startActivity(intent);
 
     }

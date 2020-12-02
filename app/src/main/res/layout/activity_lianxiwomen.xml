@@ -53,7 +53,10 @@
                 android:id="@+id/textView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="宁波经济技术开发区新大陆1069号" />
+                android:clickable="true"
+                android:onClick="qwerr"
+                android:text="宁波经济技术开发区新大陆1069号"
+                android:textColor="@color/colorPrimaryDark" />
         </LinearLayout>
 
         <LinearLayout
@@ -76,6 +79,7 @@
                 android:onClick="qwer"
                 android:text="www.baidu.com"
                 android:textColor="@color/colorPrimaryDark" />
+
         </LinearLayout>
     </LinearLayout>
 
