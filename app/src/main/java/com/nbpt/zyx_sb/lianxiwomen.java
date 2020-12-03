@@ -5,8 +5,11 @@ import android.content.Intent;
 import android.graphics.Paint;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.SystemClock;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import com.nbpt.smarthomelibrary.*;
 
 public class lianxiwomen extends Activity {
     TextView dh;
@@ -19,7 +22,17 @@ public class lianxiwomen extends Activity {
         dhhm.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG);
         TextView wangzhan = findViewById(R.id.WZ);
         wangzhan.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG);
+
+        Thread threadA = new Thread(new MyRunnable());
+        threadA.start();
+
+        MyThread threadB = new MyThread();
+        threadB.start();
+        SmartHub hub = new SmartHub();
+        float temp = hub.getRoomTemperature();
     }
+
+
         public void qwe (View view)
         {
             Intent intent = new Intent(Intent.ACTION_DIAL);
@@ -42,4 +55,26 @@ public class lianxiwomen extends Activity {
         startActivity(intent);
 
     }
+    public class MyRunnable implements Runnable{
+        @Override
+        public void run(){
+            while (true){
+                Log.d("Thread","ThreadA正在运行");
+                SystemClock.sleep(1000);
+
+            }
+        }
+    }
+
+    public class MyThread extends Thread{
+        @Override
+        public void run() {
+            super.run();
+            while (true){
+                Log.d("Thread","ThreadB正在运行");
+                SystemClock.sleep(1000);
+            }
+        }
+    }
+
 }
