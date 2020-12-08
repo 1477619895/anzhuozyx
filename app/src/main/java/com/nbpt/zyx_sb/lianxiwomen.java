@@ -11,8 +11,10 @@ import android.view.View;
 import android.widget.TextView;
 import com.nbpt.smarthomelibrary.*;
 
+import static android.content.ContentValues.TAG;
+
 public class lianxiwomen extends Activity {
-    TextView dh;
+    TextView tvTemp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,8 +25,9 @@ public class lianxiwomen extends Activity {
         TextView wangzhan = findViewById(R.id.WZ);
         wangzhan.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG);
 
-        Thread threadA = new Thread(new MyRunnable());
-        threadA.start();
+//        Thread threadA = new Thread(new HomeworkThread());
+//        threadA.start();
+        tvTemp =(TextView)findViewById(R.id.textView6);
 
         MyThread threadB = new MyThread();
         threadB.start();
@@ -55,24 +58,28 @@ public class lianxiwomen extends Activity {
         startActivity(intent);
 
     }
-    public class MyRunnable implements Runnable{
-        @Override
-        public void run(){
-            while (true){
-                Log.d("Thread","ThreadA正在运行");
-                SystemClock.sleep(1000);
-
-            }
-        }
-    }
+//    public class HomeworkThread implements Runnable{
+//        @Override
+//        public void run(){
+//            while (true){
+//                Log.d("Thread","HomeworkThread正在运行");
+//                SystemClock.sleep(3000);
+//
+//            }
+//        }
+//    }
 
     public class MyThread extends Thread{
         @Override
         public void run() {
             super.run();
             while (true){
-                Log.d("Thread","ThreadB正在运行");
+                SmartHub hub = new SmartHub();
+                float temp = hub.getRoomTemperature();
+                Log.d(TAG, "当前室内温度: "+temp);;
+                tvTemp.setText("38.5");
                 SystemClock.sleep(1000);
+
             }
         }
     }

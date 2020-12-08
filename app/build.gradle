@@ -20,8 +20,6 @@ android {
 }
 
 dependencies {
-
-
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation files('libs/SmartHub_V1.0.jar')
 
